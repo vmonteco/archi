@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for object in object_list %}
+{% include "mygallery/picture_list_item.html" with object=object %}
+{% empty %}
+<li>No image yet</li>
+{% endfor %}
+{% endblock %}
